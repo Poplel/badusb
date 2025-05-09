@@ -242,8 +242,8 @@ Add-Type -AssemblyName System.Drawing  # Keep this, it is needed to create the i
 $filename = "$env:tmp\foo.jpg"  
 $bmp = new-object System.Drawing.Bitmap $hdc,$h  
 $font = new-object System.Drawing.Font Consolas,18  
-$brushBg = [System.Drawing.Brushes]::White  
-$brushFg = [System.Drawing.Brushes]::Black  
+$brushBg = [System.Drawing.Brushes]::Black  
+$brushFg = [System.Drawing.Brushes]::White  
 $graphics = [System.Drawing.Graphics]::FromImage($bmp)  
 $graphics.FillRectangle($brushBg,0,0,$bmp.Width,$bmp.Height)  
 
