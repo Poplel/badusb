@@ -87,3 +87,4 @@ $Bitmap.Dispose()
 
 # Display the image
 Start-Process $ImagePath
+Read-Host -Prompt "Press Enter to continue..."
