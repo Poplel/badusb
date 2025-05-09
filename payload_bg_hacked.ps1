@@ -1,4 +1,4 @@
-
+Write-Host "Hello from the web!"
 function Get-PublicIP {
     try {
         (Invoke-WebRequest -Uri "https://api.ipify.org" -UseBasicParsing).Content.Trim()
