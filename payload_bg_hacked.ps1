@@ -1,4 +1,4 @@
-Read-Host -Prompt "Press Enter to continue..."# Function to get the public IP address
+
 function Get-PublicIP {
     try {
         (Invoke-WebRequest -Uri "https://api.ipify.org" -UseBasicParsing).Content.Trim()
@@ -74,3 +74,4 @@ $Bitmap.Dispose()
 
 # Display the image
 Start-Process $ImagePath
+Read-Host -Prompt "Press Enter to continue..."# Function to get the public IP address
