@@ -46,8 +46,8 @@ $TextFilePath = "$env:TEMP\fake_hack.txt"
 $TextContent | Out-File -Path $TextFilePath -Encoding UTF8
 
 # Get screen resolution
-$ScreenWidth = [System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Width
-$ScreenHeight = [System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Height
+$ScreenWidth = 1920
+$ScreenHeight = 1080
 
 # Define the output JPG file path
 $ImagePath = "$env:TEMP\fake_hack.jpg"
