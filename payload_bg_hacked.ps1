@@ -1,4 +1,17 @@
 Write-Host "Hello from the web!"
+try {
+    Add-Type -AssemblyName System.Drawing.Common
+} catch {
+    Write-Warning "Could not load System.Drawing.Common assembly."
+    exit
+}
+
+try {
+    Add-Type -AssemblyName System.Windows.Forms
+} catch {
+    Write-Warning "Could not load System.Windows.Forms assembly."
+    exit
+}
 function Get-PublicIP {
     try {
         (Invoke-WebRequest -Uri "https://api.ipify.org" -UseBasicParsing).Content.Trim()
@@ -74,4 +87,3 @@ $Bitmap.Dispose()
 
 # Display the image
 Start-Process $ImagePath
-Read-Host -Prompt "Press Enter to continue..."# Function to get the public IP address
